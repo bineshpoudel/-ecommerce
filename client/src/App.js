@@ -1,7 +1,11 @@
+import Header from './components/Header'
+import Home from './pages/Home'
+
 function App() {
   return (
-    <div className='App'>
-      <h className='text-red-500'>Hello world</h>
+    <div className='font-bodyFont'>
+      <Header />
+      <Home />
     </div>
   )
 }
