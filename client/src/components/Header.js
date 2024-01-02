@@ -5,16 +5,17 @@ import { useSelector } from 'react-redux'
 
 const Header = () => {
   const productData = useSelector((state) => state.app.productData)
+
   return (
     <div className='w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50'>
-      <div className='max-w-screen-xl h-full mx-auto flex items-center justify-between'>
+      <div className='max-w-screen-xl h-full mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8'>
         <Link to='/'>
           <div>
             <img src={logoDark} className='w-28' alt='' />
           </div>
         </Link>
-        <div className='flex items-center gap-8'>
-          <ul className='flex items-center gap-8'>
+        <div className='flex items-center gap-4 md:gap-8'>
+          <ul className='hidden md:flex items-center gap-4'>
             <li className='text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'>
               Home
             </li>

@@ -22,22 +22,27 @@ const CartItem = () => {
         {productData.map((item) => (
           <div
             key={item._id}
-            className='flex items-center justify-between gap-6 mt-6'
+            // className='flex items-center justify-between gap-6 mt-6 border '
+            className='flex flex-col sm:flex-row items-center justify-between sm:justify-center  gap-6 mt-6 border'
           >
-            <div className='flex items-center gap-2'>
-              <MdOutlineClose
+            <div className='flex items-center gap-3'>
+              <div
                 onClick={() =>
                   dispatch(deleteItem(item._id)) &
                   toast.error(`${item.title} is deleted`)
                 }
-                className='text-xl text-gray-600 hover:text-red-600 cursor-pointer duration-300'
-              />
+                className='text-4xl text-gray-600 hover:text-red-600 cursor-pointer duration-300'
+                style={{ fontSize: '1.5rem' }} // Adjust the size as needed
+              >
+                <MdOutlineClose />
+              </div>
               <img
                 className='w-32 h-32 object-cover'
                 src={item.image}
                 alt='productImg'
               />
             </div>
+
             <h2 className='w-52'>{item.title}</h2>
             <p className='w-10'>${item.price}</p>
             <div className='w-52 flex items-center justify-between text-gray-500 gap-4 border p-3'>

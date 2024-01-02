@@ -12,8 +12,8 @@ import {
 } from 'react-icons/fa'
 const Footer = () => {
   return (
-    <div className=' bg-black text-[#949494] py-20 font-titleFont'>
-      <div className='max-w-screen-xl mx-auto grid grid-cols-4'>
+    <div className=' bg-black text-[#949494] py-20 font-titleFont p-5'>
+      <div className='max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-10'>
         <div className='flex flex-col gap-4'>
           <img className='w-32' src={logoLight} alt='' />
           <p className='text-white text-small tracking-wide'>redstore.com</p>
