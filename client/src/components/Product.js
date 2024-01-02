@@ -15,10 +15,25 @@ const Product = () => {
   }, [])
   return (
     <div>
-      <div className='max-w-screen-xl mx-auto my-10 flex gap-10'>
-        <div className='w-2/5 relative'>
+      {/* <div className='max-w-screen-xl mx-auto my-10 flex gap-10'> */}
+      <div className='max-w-screen-xl mx-auto my-10 flex flex-col sm:flex-row gap-10 p-4'>
+        {/* <div className='w-2/5 relative '>
           <img
-            className='w-full h-[550px] object-cover'
+            className='w-full h-[550px] object-cover sm:h-auto'
+            src={details.image}
+            alt='productimage'
+          />
+          <div className='absolute right-0 top-4'>
+            {details.isNew && (
+              <p className='bg-black text-white font-semibold font-titleFont px-8 py-1'>
+                Sale
+              </p>
+            )}
+          </div>
+        </div> */}
+        <div className='w-full sm:w-2/5 relative'>
+          <img
+            className='w-full h-[550px] object-cover sm:h-auto'
             src={details.image}
             alt='productimage'
           />
@@ -30,6 +45,7 @@ const Product = () => {
             )}
           </div>
         </div>
+
         <div className='w-3/5 flex flex-col justify-center gap-12 '>
           <div>
             <h2 className='text-4xl font-semibold'>{details.title}</h2>
@@ -53,7 +69,8 @@ const Product = () => {
             <p className='text-xs text-gray-500'>(1 customer review)</p>
           </div>
           <p className='text-base text-gray-700 -mt-3'>{details.description}</p>
-          <div className='flex gap-4'>
+
+          <div className='flex flex-col sm:flex-row gap-4'>
             <div className='w-52 flex items-center justify-between text-gray-500 gap-4 border p-3'>
               <p className='text-sm'>Quantity</p>
               <div className='flex items-center gap-4 text-sm font-semibold'>
