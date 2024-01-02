@@ -48,7 +48,7 @@ const Banner = () => {
           />
         </div>
       </div>
-      <div className='absolute w-fit left-0 right-0 mx-auto flex gap-8 top-80 md:bottom-24 lg:bottom-24'>
+      <div className='absolute w-fit left-0 right-0 mx-auto flex gap-8 bottom-80 md:bottom-30 lg:bottom-24'>
         <div
           onClick={prevSlide}
           className='w-14 h-12 border-[1px] border-gray-700 flex items-center justify-center hover:cursor-pointer hover:bg-gray-700 hover:text-white duration-300'
